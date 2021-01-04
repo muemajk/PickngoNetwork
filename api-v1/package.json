@@ -1,0 +1,40 @@
+{
+  "name": "api-v1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "keywords": [
+    "Crypto item Api",
+    "Api app"
+  ],
+  "engines": {
+    "node": ">=8.9.4 <9.0",
+    "npm": ">=5.6.0 <6.0"
+  },
+  "dependencies": {
+    "axios": "^0.19.0",
+    "body-parser": "^1.17.1",
+    "cookie-parser": "^1.4.3",
+    "cors": "^2.8.3",
+    "express": "^4.15.2",
+    "express-bearer-token": "^2.1.0",
+    "express-jwt": "^5.3.0",
+    "express-session": "^1.15.2",
+    "fabric-ca-client": "~1.4.0",
+    "fabric-client": "~1.4.0",
+    "fs-extra": "^2.0.0",
+    "jsonwebtoken": "^7.3.0",
+    "log4js": "^0.6.38",
+    "prom-client": "^11.5.3",
+    "fabric-common": "^1.4.10",
+    "fabric-network": "^2.1.0",
+    "http": "0.0.1-security",
+    "js-yaml": "^3.13.1"
+  },
+  "author": "muemajk",
+  "license": "ISC"
+}

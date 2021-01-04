@@ -1,0 +1,91 @@
+---
+name: first-network-org2
+version: 1.0.0
+client:
+  organization: Org2
+  connection:
+    timeout:
+      peer:
+        endorser: '300'
+organizations:
+  Org2:
+    mspid: Org2MSP
+    peers:
+    - peer0.org2.pickngo.com
+    - peer1.org2.pickngo.com
+    certificateAuthorities:
+    - ca.org2.pickngo.com
+peers:
+  peer0.org2.pickngo.com:
+    url: grpcs://localhost:9051
+    tlsCACerts:
+      pem: |
+        -----BEGIN CERTIFICATE-----
+        MIICVjCCAf2gAwIBAgIQE3gM3YfCbFDN4HLCXkRl5zAKBggqhkjOPQQDAjB2MQsw
+        CQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNU2FuIEZy
+        YW5jaXNjbzEZMBcGA1UEChMQb3JnMi5waWNrbmdvLmNvbTEfMB0GA1UEAxMWdGxz
+        Y2Eub3JnMi5waWNrbmdvLmNvbTAeFw0yMDEyMTIwNDQ2MDBaFw0zMDEyMTAwNDQ2
+        MDBaMHYxCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQH
+        Ew1TYW4gRnJhbmNpc2NvMRkwFwYDVQQKExBvcmcyLnBpY2tuZ28uY29tMR8wHQYD
+        VQQDExZ0bHNjYS5vcmcyLnBpY2tuZ28uY29tMFkwEwYHKoZIzj0CAQYIKoZIzj0D
+        AQcDQgAEvrDKl+TSUdYZnnfYDCnEHp/dkUwvHMH0JpK1zVuZ87m4inXSVnT8knI6
+        GcsjV5Fao39JUxGBNoamWbL+P2IgI6NtMGswDgYDVR0PAQH/BAQDAgGmMB0GA1Ud
+        JQQWMBQGCCsGAQUFBwMCBggrBgEFBQcDATAPBgNVHRMBAf8EBTADAQH/MCkGA1Ud
+        DgQiBCC6dcedYuCbAoz2arlnDvxb39n5mxB0Qka9xwxlX6rpBjAKBggqhkjOPQQD
+        AgNHADBEAiBus5PNTt5pVpSinBc+CjretiA6iaqMlqJflgM3/uK+4AIgEg07lQHb
+        qrfXsr987/C46l0npS41Z0B6eMYgKxWM4Lo=
+        -----END CERTIFICATE-----
+        
+        
+    grpcOptions:
+      ssl-target-name-override: peer0.org2.pickngo.com
+      hostnameOverride: peer0.org2.pickngo.com
+  peer1.org2.pickngo.com:
+    url: grpcs://localhost:10051
+    tlsCACerts:
+      pem: |
+        -----BEGIN CERTIFICATE-----
+        MIICVjCCAf2gAwIBAgIQE3gM3YfCbFDN4HLCXkRl5zAKBggqhkjOPQQDAjB2MQsw
+        CQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNU2FuIEZy
+        YW5jaXNjbzEZMBcGA1UEChMQb3JnMi5waWNrbmdvLmNvbTEfMB0GA1UEAxMWdGxz
+        Y2Eub3JnMi5waWNrbmdvLmNvbTAeFw0yMDEyMTIwNDQ2MDBaFw0zMDEyMTAwNDQ2
+        MDBaMHYxCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQH
+        Ew1TYW4gRnJhbmNpc2NvMRkwFwYDVQQKExBvcmcyLnBpY2tuZ28uY29tMR8wHQYD
+        VQQDExZ0bHNjYS5vcmcyLnBpY2tuZ28uY29tMFkwEwYHKoZIzj0CAQYIKoZIzj0D
+        AQcDQgAEvrDKl+TSUdYZnnfYDCnEHp/dkUwvHMH0JpK1zVuZ87m4inXSVnT8knI6
+        GcsjV5Fao39JUxGBNoamWbL+P2IgI6NtMGswDgYDVR0PAQH/BAQDAgGmMB0GA1Ud
+        JQQWMBQGCCsGAQUFBwMCBggrBgEFBQcDATAPBgNVHRMBAf8EBTADAQH/MCkGA1Ud
+        DgQiBCC6dcedYuCbAoz2arlnDvxb39n5mxB0Qka9xwxlX6rpBjAKBggqhkjOPQQD
+        AgNHADBEAiBus5PNTt5pVpSinBc+CjretiA6iaqMlqJflgM3/uK+4AIgEg07lQHb
+        qrfXsr987/C46l0npS41Z0B6eMYgKxWM4Lo=
+        -----END CERTIFICATE-----
+        
+        
+    grpcOptions:
+      ssl-target-name-override: peer1.org2.pickngo.com
+      hostnameOverride: peer1.org2.pickngo.com
+certificateAuthorities:
+  ca.org2.pickngo.com:
+    url: https://localhost:8054
+    caName: ca-org2
+    tlsCACerts:
+      pem: |
+        -----BEGIN CERTIFICATE-----
+        MIICUTCCAfigAwIBAgIRAJoCY3AF+6aFp25DEJVyE9QwCgYIKoZIzj0EAwIwczEL
+        MAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWExFjAUBgNVBAcTDVNhbiBG
+        cmFuY2lzY28xGTAXBgNVBAoTEG9yZzIucGlja25nby5jb20xHDAaBgNVBAMTE2Nh
+        Lm9yZzIucGlja25nby5jb20wHhcNMjAxMjEyMDQ0NjAwWhcNMzAxMjEwMDQ0NjAw
+        WjBzMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMN
+        U2FuIEZyYW5jaXNjbzEZMBcGA1UEChMQb3JnMi5waWNrbmdvLmNvbTEcMBoGA1UE
+        AxMTY2Eub3JnMi5waWNrbmdvLmNvbTBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IA
+        BGwjOr+zIavriA3IAW5fkI5TAMsuDDpmofDk1MrEt0XCcxcB+UdwYl/eEtKvL0WO
+        0G/CXbRuSFjQ3PBHbj+LqC+jbTBrMA4GA1UdDwEB/wQEAwIBpjAdBgNVHSUEFjAU
+        BggrBgEFBQcDAgYIKwYBBQUHAwEwDwYDVR0TAQH/BAUwAwEB/zApBgNVHQ4EIgQg
+        W6RcRPWfhBAfcl5Gch2sSTJB7+gVUAr2HGDOY2/nk3IwCgYIKoZIzj0EAwIDRwAw
+        RAIgTNp+ZkQCN0oBemFj5BUwNqCuYdSoLwX3hRNlu3aqTqsCIGIxm72cCmaEzPSp
+        1ugAncZrMneQ8R6uWcJ+5hsCXvuz
+        -----END CERTIFICATE-----
+        
+        
+    httpOptions:
+      verify: false
